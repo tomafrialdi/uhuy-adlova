@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: Gothic;
+  src: url("../fonts/gothicb.ttf") format("truetype");
+}
+@font-face {
+  font-family: Manjari;
+  src: url("../fonts/Manjari-Regular.ttf") format("truetype");
+}
