@@ -1,0 +1,23 @@
+---
+import LogoTextAldova from "../../assets/images/logo-aldova-text.png"
+import Navburger from "./Navburger.vue"
+import Menus from "./Menus.vue"
+---
+
+<nav class="px-6 py-4 lg:px-16 lg:py-6">
+  <div class="nav-content-wrapper flex justify-between items-center">
+    <img
+      src={LogoTextAldova}
+      alt="logo-text-aldova"
+      class="w-[96px] h-[30px] lg:w-[160px] lg:h-[50px]"
+    />
+    <div class="items-center gap-x-10 lg:flex hidden">
+      <Menus client:visible class="flex gap-x-10" />
+      <button
+        class="text-primary-2 border-2 border-primary-2 rounded-lg font-manjari font-bold px-7 py-4"
+        >Talk to Us</button
+      >
+    </div>
+    <Navburger client:visible />
+  </div>
+</nav>
