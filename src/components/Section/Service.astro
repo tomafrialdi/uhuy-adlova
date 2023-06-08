@@ -1,0 +1,69 @@
+---
+import IconChartArrowUp from "../../assets/icons/icon-chart-arrow-up-rectangle.svg"
+import IconTask from "../../assets/icons/icon-task.svg"
+import IconPresentationChart from "../../assets/icons/icon-presentation-chart.svg"
+
+const cardsContent = [
+  {
+    icon: IconChartArrowUp,
+    title: "Search Engine Optimization (SEO)",
+    desc: `We help you incrase your visibility on search engines and drive organic traffic to your website. Keyword research and optimization to improve your website's ranking.`,
+  },
+  {
+    icon: IconTask,
+    title: "Content Marketing",
+    desc: `Stand out from the competition with our creative brilliance. Our talented designers and copywriters work hand in hand to create captivating visuals and compelling content that resonates with your audience.`,
+  },
+  {
+    icon: IconPresentationChart,
+    title: "Social Media Marketing",
+    desc: `We engage and grow your audience through effective social media campaigns. Customized content creation and scheduling across popular platforms.`,
+  },
+]
+---
+
+<section
+  class="px-6 pb-[98px] lg:mx-[70px] lg:px-12 lg:pt-16 lg:pb-[76px] lg:bg-blue-light-3 lg:rounded-3xl lg:mb-[140px]"
+>
+  <h6
+    class="font-manjari text-[18px] leading-[140%] text-neutral-2 text-center lg:text-[32px]"
+  >
+    Our Service
+  </h6>
+  <h1 class="font-gothic text-[32px] leading-[140%] text-center lg:text-[52px]">
+    What We’re Offering?
+  </h1>
+  <p
+    class="hidden font-manjari text-neutral-1 text-center text-2xl max-w-[939px] mx-auto mt-6 lg:block"
+  >
+    We specialize in creating customized campaigns that resonate with your
+    target audience and deliver measurable results.
+  </p>
+  <div
+    class="card-groups px-6 pt-2 flex flex-col shadow-[7px_8px_14px_0_rgba(142,151,158,0.04)] xl:flex-row xl:justify-center lg:gap-y-6 lg:shadow-none lg:gap-x-[52px] lg:mt-[32px]"
+  >
+    {
+      cardsContent.map((card, index) => (
+        <div
+          class={`card flex gap-x-4 mt-4 lg:mt-0 lg:bg-white lg:p-8 lg:flex-col lg:rounded-3xl xl:w-[365px] ${
+            index <= 1 ? `lg:border-b-0 border-b border-neutral-4` : ""
+          }`}
+        >
+          <div class="p-3 bg-blue-light-3 max-h-12 max-w-[48px] rounded-[10px]">
+            <div class="w-6 h-6">
+              <img src={card.icon} alt={`icon-${index}`} />
+            </div>
+          </div>
+          <div class="lg:mt-6 lg:flex lg:flex-col">
+            <p class="font-gothic text-lg font-bold lg:text-2xl">
+              {card.title}
+            </p>
+            <p class="mt-4 font-manjari font-thin text-neutral-2 mb-4 lg:mt-6 lg:mb-0 lg:text-lg">
+              {card.desc}
+            </p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>
