@@ -1,0 +1,40 @@
+---
+import ImgAboutUs from "../../assets/images/img-about-us.png"
+import ImgAboutUsMobile from "../../assets/images/img-about-us-mobile.png"
+---
+
+<section class="px-6 pb-12 lg:flex lg:gap-x-10 lg:pl-0 lg:pb-[240px]">
+  <div class="w-auto max-w-[55%]">
+    <img src={ImgAboutUs} alt="img-about-us" class="hidden lg:block" />
+  </div>
+  <div class="xl:max-w-[496px]">
+    <h6
+      class="font-bold font-manjari text-lg text-neutral-2 text-center leading-[140%] xl:text-[32px] lg:text-start"
+    >
+      About Us
+    </h6>
+    <h1
+      class="font-gothic text-[32px] text-center leading-[140%] xl:text-[52px] lg:text-start"
+    >
+      Why You Should Choose Adlova
+    </h1>
+    <img
+      src={ImgAboutUsMobile}
+      alt="img-about-us-mobile"
+      class="mt-4 lg:hidden"
+    />
+    <p class="font-manjari text-neutral-1 my-4 xl:text-lg xl:my-6">
+      We transform your brand into an unstoppable force in the digital world. We
+      are passionate about driving your success and propelling your business to
+      new heights through innovative strategies and cutting-edge solutions.
+      <br />
+      <br />
+      At Adlova, we understand the power of effective marketing. With a team of experienced
+      professionals, we specialize in creating customized campaigns that resonate
+      with your target audience and deliver measurable results.
+    </p>
+    <span class="font-gothic text-primary-2 cursor-pointer xl:text-lg"
+      >Read More...</span
+    >
+  </div>
+</section>
