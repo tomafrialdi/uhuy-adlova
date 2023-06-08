@@ -7,31 +7,29 @@ const subtitle = `If you’re looking a trusted partner for your driven targeted
     will help your bussiness like yours thrive in the digital landscape.`
 ---
 
-<section class="px-6 pt-4 lg:pl-[70px] lg:pr-0">
-  <div class="relative">
-    <div
-      class="lg:absolute lg:z-10 lg:left-0 lg:top-0 lg:w-[55%] xl:pt-[170px] lg:pt-[120px]"
+<section class="px-6 pt-4 pb-16 lg:pl-[70px] lg:pr-0 lg:py-0 relative">
+  <div
+    class="lg:absolute lg:z-10 lg:top-0 lg:w-[55%] xl:pt-[170px] lg:pt-[120px]"
+  >
+    <h1
+      class="text-[32px] font-bold font-gothic text-center leading-[140%] self-stretch xl:text-[52px] lg:text-[36px] lg:text-left lg:max-w-[735px]"
     >
-      <h1
-        class="text-[32px] font-bold font-gothic text-center leading-[140%] self-stretch xl:text-[52px] lg:text-[36px] lg:text-left lg:max-w-[735px]"
-      >
-        {title}
-      </h1>
-      <h4
-        class="font-manjari leading-[140%] text-center mt-6 text-neutral-1 xl:text-[24px] lg:text-xl lg:text-left lg:max-w-[660px] lg:mt-8"
-      >
-        {subtitle}
-      </h4>
-      <button
-        class="bg-primary-2 text-white w-full rounded-lg py-[12px] mt-6 lg:max-w-[186px] lg:mt-8"
-        >Let's Collaborate</button
-      >
-    </div>
-    <img
-      src={ImgHero}
-      alt="img-hero"
-      class="absolute hidden right-0 xl:w-[910px] lg:top-10 lg:w-[660px] lg:block"
-    />
+      {title}
+    </h1>
+    <h4
+      class="font-manjari leading-[140%] text-center mt-6 text-neutral-1 xl:text-[24px] lg:text-xl lg:text-left lg:max-w-[660px] lg:mt-8"
+    >
+      {subtitle}
+    </h4>
+    <button
+      class="bg-primary-2 text-white w-full rounded-lg py-[12px] mt-6 lg:max-w-[186px] lg:mt-8"
+      >Let's Collaborate</button
+    >
   </div>
+  <img
+    src={ImgHero}
+    alt="img-hero"
+    class="absolute hidden right-0 xl:w-[910px] lg:top-10 lg:w-[660px] lg:block"
+  />
   <img src={ImgHeroMobile} alt="img-hero-mobile" class="mt-12 lg:hidden" />
 </section>
