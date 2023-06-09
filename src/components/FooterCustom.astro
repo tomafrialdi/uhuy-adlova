@@ -1,0 +1,86 @@
+---
+import LogoText from "../assets/images/logo-aldova-text.png"
+import IconWhatsapp from "../assets/icons/icon-whatsapp.svg"
+import IconMail from "../assets/icons/icon-mail.svg"
+import IconFb from "../assets/icons/icon-fb.svg"
+import IconInstagram from "../assets/icons/icon-instagram.svg"
+import IconLinkedin from "../assets/icons/icon-linkedin.svg"
+
+const socialMediaIcons = [
+  {
+    icon: IconFb,
+    width: 15,
+    height: 13,
+  },
+  {
+    icon: IconInstagram,
+    IconLinkedin,
+    width: 22,
+    height: 9,
+  },
+  {
+    icon: IconLinkedin,
+    width: 21,
+    height: 9,
+  },
+]
+---
+
+<footer
+  class="p-7 lg:z-10 xl:mt-[240px] xl:px-[150px] lg:bg-neutral-4 lg:mt-[140px] lg:pt-[300px] lg:px-[120px]"
+>
+  <div class="lg:flex lg:justify-between">
+    <div class="xl:flex xl:gap-x-10 xl:items-start">
+      <img
+        src={LogoText}
+        alt="logo-text-aldova"
+        class="w-[128px] lg:w-[280px] lg:h-[88px]"
+      />
+      <p
+        class="mt-4 font-manjari text-neutral-1 lg:mt-0 lg:text-lg lg:max-w-[345px]"
+      >
+        A marketing digital agency focus on ads, keyword research, on-page
+        optimization, link building, and analytic tracking.
+      </p>
+    </div>
+    <div class="font-manjari mt-8 lg:mt-0 lg:text-lg">
+      <p>Services</p>
+      <ul class="text-neutral-1 mt-2 lg:mt-4">
+        <li class="lg:mt-1">Content Marketing</li>
+        <li class="lg:mt-1">SEO Service</li>
+        <li class="lg:mt-1">Social Ads</li>
+      </ul>
+    </div>
+    <div class="font-manjari mt-6 lg:mt-0">
+      <p class="lg:text-lg">Reach Us</p>
+      <div class="mt-2 lg:mt-4">
+        <div class="flex">
+          <img src={IconMail} alt="icon-mail" width="24" />
+          <span class="ml-2 text-neutral-1 lg:text-lg">hello@adlova.id</span>
+        </div>
+        <div class="flex mt-2">
+          <img src={IconWhatsapp} alt="icon-mail" width="24" />
+          <span class="ml-2 text-neutral-1 lg:text-lg">+62 89635 2345</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="font-manjari border-t mt-7 pt-4 xl:mt-0 xl:pt-0">
+    <p class="text-sm text-neutral-2 lg:text-2xl">Our Office</p>
+    <p class="text-neutral-1 lg:text-2xl">
+      Villa Dago Tol Tangerang Banten 111580
+    </p>
+    <div class="flex gap-x-4 mt-2 lg:mt-12">
+      {
+        socialMediaIcons.map((icon, index) => (
+          <img
+            src={icon.icon}
+            alt={`icon-${index}`}
+            width={icon.width}
+            height={icon.height}
+          />
+        ))
+      }
+    </div>
+  </div>
+</footer>
