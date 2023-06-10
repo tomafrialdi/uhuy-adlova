@@ -1,37 +1,64 @@
 <template>
   <ul>
     <li
-      v-for="menu in menus"
+      v-for="(menu, index) in menus"
       :key="menu.label"
       class="font-manjari cursor-pointer"
-      @click="handleClick(menu)"
+      :class="{
+        'text-primary-1': index == currentSection,
+      }"
+      @click="handleClick(menu.to)"
     >
       {{ menu.label }}
+      <!-- {{ currentSection }} -->
     </li>
   </ul>
 </template>
 
 <script setup>
-import { reactive } from "vue"
+import { reactive, ref, onMounted } from "vue"
 
 const menus = reactive([
   {
     label: "Home",
-    to: "home",
+    to: ".home",
   },
   {
     label: "Service",
-    to: "service",
+    to: ".service",
   },
   {
     label: "About",
-    to: "about",
+    to: ".about",
   },
 ])
 
-function handleClick(menu) {
-  console.log(`${menu.label} clicked`)
+const currentSection = ref()
+
+function handleClick(to) {
+  document.querySelector(to).scrollIntoView({
+    behavior: "smooth",
+  })
 }
+
+onMounted(() => {
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry, index) => {
+        if (entry.isIntersecting) {
+          currentSection.value = entry.target.getAttribute("id")
+        }
+      })
+    },
+    {
+      rootMargin: "0px 0px -80% 0px",
+    }
+  )
+
+  document.querySelectorAll(".section").forEach((section) => {
+    observer.observe(section)
+  })
+})
 </script>
 
 <style lang="scss" scoped></style>
