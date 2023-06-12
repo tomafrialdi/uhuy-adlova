@@ -18,6 +18,8 @@
 <script setup>
 import { reactive, ref, onMounted } from "vue"
 
+const emit = defineEmits(["close:menu"])
+
 const menus = reactive([
   {
     label: "Home",
@@ -39,6 +41,7 @@ function handleClick(to) {
   document.querySelector(to).scrollIntoView({
     behavior: "smooth",
   })
+  emit("close:menu")
 }
 
 onMounted(() => {
