@@ -1,6 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro"
 import Navbar from "../components/Navbar/index.astro"
+import NavbarVue from "../components/Navbar/Vue.vue"
 import Home from "../components/Section/Home.astro"
 import Service from "../components/Section/Service.astro"
 import About from "../components/Section/About.astro"
@@ -10,7 +11,8 @@ import "../assets/css/main.css"
 ---
 
 <Layout title="Adlova">
-  <Navbar />
+  <!-- <Navbar /> -->
+  <NavbarVue client:visible />
   <main>
     <Home />
     <Service />
